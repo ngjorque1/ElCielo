@@ -1,0 +1,21 @@
+.titulo {
+    font-family: Raleway;
+    text-align: center;
+}
+
+#contenedor-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.producto {
+    width: 200px;
+    background-color: beige;
+    padding: 10px;
+    font-family: Raleway;
+    margin: 50px;
+}
+
+.imagenproducto{
+    width: 200px;
+}
