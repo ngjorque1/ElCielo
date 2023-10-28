@@ -46,6 +46,7 @@ const contenedorProductos = document.querySelector("#contenedor-productos");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 
 
+
 function cargarProductos(){
     productos.forEach(producto => {
         const div = document.createElement("div");
@@ -59,7 +60,7 @@ function cargarProductos(){
 
     contenedorProductos.append(div);
     })
-}
+};
 
 cargarProductos();
 
@@ -81,14 +82,49 @@ function agregarAlCarrito(e) {
     if (productoAgregado) {
         productosEnCarrito.push(productoAgregado);
         console.log("Producto agregado al carrito:", productoAgregado);
+        Swal.fire({
+            position: 'bottom-left',
+            icon: 'success',
+            title: 'Producto agregado al carrito',
+            showConfirmButton: false,
+            timer: 1000,
+            width: 300,
+            padding: '50',
+
+            
+        });
     } else {
         console.log("No se encontró el producto con el ID:", NombreBotonBoton);}}
 
-    productosEnCarrito.push(productoAgregado);
+    productosEnCarrito.push();
     console.log(productosEnCarrito);
 
 
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito));
+
+    document.getElementById('btn-buscar').addEventListener('click', function() {
+        const textoBuscado = document.getElementById('input-buscador').value.toLowerCase();
+        const productos = document.querySelectorAll('.producto');
+    
+        productos.forEach(function(producto) {
+            const nombreProducto = producto.querySelector('.titulo-producto').textContent.toLowerCase();
+            const categoriaProducto = producto.querySelector('.categoria').textContent.toLowerCase();
+    
+            if (nombreProducto.includes(textoBuscado) || categoriaProducto.includes(textoBuscado)) {
+                producto.style.display = 'block';
+            } else {
+                producto.style.display = 'none';
+            }
+        });
+    });
+    
+  
+    
+
+    
+
+
+
 
 
 

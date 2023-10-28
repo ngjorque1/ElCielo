@@ -30,12 +30,21 @@
 
 <main>
 
-<h1 class="titulo">Todos los productos</h1>
-<div id="buscador">
-    <input type="text" id="input-buscador" placeholder="Buscar productos">
-    <button id="btn-buscar">Buscar</button>
-<div id="contenedor-productos"> </div>
-<script src="main.js"> </script>
+
+
+<h1 class="titulo">Contacto</h1>
+
+<form id="formulario-contacto">
+    <label> Nombre </label>
+    <input type="text" id="nombre-usuario" name="nombre-usuario" />
+    <label> Correo </label>
+    <input type="email" id="email-usuario" name="email-usuario" />
+    <label> Mensaje </label>
+    <textarea id="mensaje" name="mensaje"></textarea>
+    <input type="submit" value="Enviar"/>
+</form>
+
+<script src="contacto.js"></script>
 
 
 </main>
