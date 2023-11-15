@@ -1,3 +1,5 @@
+// let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+
 const productos = [
     {id: 290930,
      nombre: "Moet Organico",
@@ -73,7 +75,13 @@ function actualizarBotonesAgregar() {
 }
 
 actualizarBotonesAgregar();
-const productosEnCarrito = [];
+
+let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || [];;
+
+if (!productosEnCarrito) {
+    productosEnCarrito = [];}
+
+
 
 function agregarAlCarrito(e) {
     const NombreBoton = e.currentTarget.id;
@@ -96,11 +104,12 @@ function agregarAlCarrito(e) {
     } else {
         console.log("No se encontró el producto con el ID:", NombreBotonBoton);}}
 
+        
     productosEnCarrito.push();
     console.log(productosEnCarrito);
 
 
-    localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito));
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 
     document.getElementById('btn-buscar').addEventListener('click', function() {
         const textoBuscado = document.getElementById('input-buscador').value.toLowerCase();

@@ -1,4 +1,8 @@
-// const productosEnCarrito = JSON.parse(localStorage.getItem("productosEnCarrito"));
+// localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+
+// const productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+
+// console.log(productosEnCarrito);
 
 // if (productosEnCarrito) {
 //     const contenedorCarrito = document.querySelector("#contenedor-carrito");
@@ -15,5 +19,9 @@
 //         contenedorCarrito.appendChild(div);
 //     })};
 
-console.log(productosEnCarrito);
+
+
+
+
+
 

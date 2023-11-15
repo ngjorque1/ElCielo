@@ -93,8 +93,8 @@ nav ul li a{
     color: white;
 };
 
-#contenedor-carrito {
-    display: flex;
+.productos-carritos {
+
     background-color: rgba(245, 245, 220, 0.322);
     padding: 0px;
     margin: 90px;}
@@ -106,6 +106,9 @@ nav ul li a{
         font-family: Raleway;
         margin: 50px;
         box-shadow:inset}
+
+
+
 
     
     
