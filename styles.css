@@ -107,6 +107,26 @@ nav ul li a{
         margin: 50px;
         box-shadow:inset}
 
+    #contenedor-carrito{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(245, 245, 220, 0.322);
+    padding: 0px;
+    margin: 90px;
+    font-family: Raleway;}
+
+    #contenedor-carrito img {
+        width: 200px;
+    }
+
+    #contenedor-carrito button {
+        background-color: #52734D;
+    font-family: Raleway;
+    color: white;}
+
+
+
+
 
 
 
